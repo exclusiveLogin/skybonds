@@ -22,7 +22,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost/getisinlist.php')
+    fetch('getisinlist.php')
       .then(response => response.json())
       .then(data => this.setState((state)=>{
         return {
@@ -34,7 +34,7 @@ class App extends Component {
   selectInsi(id){
     console.log('isin select in APP', id);
 
-    fetch('http://localhost/getisindata.php?isin='+id)
+    fetch('getisindata.php?isin='+id)
       .then(response => response.json())
       .then(data => this.setState((state)=>{
         return {
